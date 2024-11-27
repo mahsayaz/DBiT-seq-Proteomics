@@ -1,0 +1,28 @@
+#libraries
+library(Seurat)
+library(ggplot2)
+library(plyr)
+library(gridExtra)
+library(magrittr)
+library(tidyr)
+library(raster)
+library(OpenImageR)
+library(ggpubr)
+library(grid)
+library(wesanderson)
+library(dplyr)
+library(Matrix)
+library(tidyverse)
+library(SPOTlight)
+library(data.table)
+
+
+
+#set directory
+dir <- "/Users/mhsyzdn/Library/CloudStorage/Box-Box/RZ-MY/Spatial Omics/NIH-90 Sample/Data Analysis/"  
+setwd(dir)
+
+
+
+#Add image
+imported_raster = OpenImageR::readImage("/Users/mhsyzdn/Library/CloudStorage/Box-Box/RZ-MY/Spatial Omics/NIH-90 Sample/Data Analysis/ROI-hc.tif")
