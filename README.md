@@ -17,8 +17,16 @@ Read 2: Contains the spatial barcode (A and B) and unique molecular identifiers 
 To utilize CITE-seq-Count, the Read 2 file from DBiT-seq experiments needs reformatting. Due to differences in experimental design, the Read 2 of DBiT-seq corresponds to Read 1 in CITE-seq-Count, while the original Read 1 becomes Read 2.
 Steps to Reformat Data:
 1. Use the fastq_process.py script (courtesy of @edicliuyang - Yang Liu Lab at Yale) to process the raw data:
+
+### Run the Script
+
+To process the raw data, use the following commands:
+
+```bash
 python fastq_process.py
 gzip sample_R2_processed.fastq
+```
+
 
 This script prepares the data for downstream analysis and compresses the output to save storage space. 
 
