@@ -21,6 +21,7 @@ python fastq_process.py
 gzip sample_R2_processed.fastq
 
 This script prepares the data for downstream analysis and compresses the output to save storage space. 
+
 2. Process the reformatted FASTQ files with CITE-seq-Count to generate the expression matrix.
 
 
