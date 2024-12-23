@@ -11,6 +11,7 @@ DBiT-seq-Proteomic is a spatial omics sequencing technique enabling high-plex pr
 Sequencing was performed using Illumina NovaSeq 6000 with paired-end 150bp reads. The spatial CITE-seq raw FASTQ files included the following:
 
 Read 1: Contains the cDNA sequence or protein barcode.
+
 Read 2: Contains the spatial barcode (A and B) and unique molecular identifiers (UMIs).
 
 # 2. Reformatting FASTQ Read 2 File
@@ -31,5 +32,15 @@ This script prepares the data for downstream analysis and compresses the output 
 
 2. Process the reformatted FASTQ files with CITE-seq-Count to generate the expression matrix.
 
+# 3. Run CITE-seq-count
+Follow the scripts from Hoohm/CITE-seq-Count to run CITE-seq-count. We need the following files as input:
+Barcodes - AB.xls
 
+
+To run, use the following command: 
+
+```bash
+CITE-seq-Count -R1 TAGS_R1.fastq.gz -R2 TAGS_R2.fastq.gz -t TAG_LIST.csv -cbf X1 -cbl X2 -umif Y1 -umil Y2 -cells EXPECTED_CELLS -o OUTFOLDER
+
+```
 
